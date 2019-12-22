@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="left">
+        </div>
+        <div class="right">
+            <div class="bell"></div>
+            <div class="profile-icon dropdown float-right">
+                <button class="dropdown-trigger"><span>Pablo Emilio Gavira Escobar</span> <i class="svg svg-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a class="dropdown-item" href="">My Profile</a>
+                    <a class="dropdown-item" href="">Settings</a>
+                    <a class="dropdown-item" href="">Logout</a>
+                </div>
+            </div>
+       </div>
+    </div>
+    <div class="left-menu">
+        <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="header">
+            <h1>Ethereal</h1>
+            <div class="subtitle">Agents Dashboard</div>
+        </div>
+        <ul class="menu">
+            <li class="menu-item selected"><a href="">Home</a></li>
+            <li class="menu-item"><a href="">My Properties</a></li>
+            <li class="menu-item"><a href="">Analytics</a></li>
+            <li class="menu-item"><a href="">Customer Requests</a></li>
+        </ul>
+        <div class="seperator"></div>
+        <button class="green">New Post</button>
+        <ul class="menu">
+            <li class="menu-item"><a href="">Getting Started</a></li>
+        </ul>
+    </div>
+    <div class="left-menu-tint"></div>
+    <div id="page">
+        <div class="new-post">
+            <div class="new-post-header">
+                <h2>New Post</h2>
+                <div class="x-button">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="new-post-content">
+                <div class="new-post-left">
+                    <h4>Price</h4>
+                    <input type="text">
+                    <h4>Where is the property located in?</h4>
+                    <div class="field-subtitle">
+                        Only the province and the district are required. You can make any or
+                        all the other fields private so that only you can see them. It is highly
+                        recommended to at least include the town field.
+                    </div>
+                    <input type="text" placeholder="Line 1">
+                    <input type="text" placeholder="Line 2">
+                    <input type="text" placeholder="Town">
+                    <input class="input-zip-code" type="text" placeholder="Zip Code (required)">
+                    <input type="text" placeholder="District (required)">
+                    <input type="text" placeholder="Province (required)">
+                    <h4>Property Details</h4>
+                    <div class="field-subtitle">
+                        These information help customers match their needs with your
+                        property, and make better choices.
+                    </div>
+                    <div class="two-columns">
+                        <div class="detail-type left">No of rooms</div>
+                        <input class="right" type="text">
+                    </div>
+                    <div class="two-columns">
+                        <div class="detail-type left">No of bathrooms</div>
+                        <input class="right" type="text">
+                    </div>
+                    <div class="two-columns">
+                        <div class="detail-type left">No of floors</div>
+                        <input class="right" type="text">
+                    </div>
+                    <button class="no-bg-button">MORE OPTIONS</button>
+                    <h4>Description</h4>
+                    <div class="field-subtitle">
+                        Long descriptions are most welcome
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="new-post-right">
+                    <div class="upload-box">
+                        <h4>Upload Images</h4>
+                        <div class="field-subtitle">
+                            At least four images are required, and they need to be of
+                            hight quality.
+                        </div>
+                        <div class="upload-svg">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="upload" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z">
+                                </path>
+                            </svg>
+                            <button class="blue">SELECT IMAGES</button>
+                        </div>
+                    </div>
+                    <button class="disabled blue next-button">NEXT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const toggleHamburger = () => {
+            hamburger.classList.toggle('active');
+            const leftMenu = document.querySelector('.left-menu');
+            leftMenu.classList.toggle('active');
+            leftMenuTint.classList.toggle('active');
+        }
+
+        const hamburger = document.querySelector('.hamburger-icon');
+        const leftMenuTint = document.querySelector('.left-menu-tint');
+        hamburger.addEventListener('click', toggleHamburger);
+        leftMenuTint.addEventListener('click', toggleHamburger);
+
+
+
+
+    </script>
+</body>
+
+</html>
